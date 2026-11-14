@@ -183,7 +183,7 @@ function monogram(doc, ox, oy, s) {
 
 function hero(theme) {
   const H = 352;
-  const doc = new Doc(theme, W, H);
+  const doc = new Doc(theme, W, H + 12);
   const top = 34, bottom = 318, split = 452;
   doc.extra.push(`<clipPath id="sheet"><rect x="${split}" y="${top}" width="${W - split}" height="${bottom - top}"/></clipPath>`);
   doc.extra.push(hatch("band", doc.t.soft, 6));
@@ -385,11 +385,14 @@ function stackStrip(theme) {
 
 // --- 4. Section heads, buttons, title block -----------------------------------
 
+// Shown at natural size (never scaled to the column), so the title stays
+// 30px on a phone too.
 function sectionHead(theme, index, title) {
-  const doc = new Doc(theme, W, 64);
-  doc.add(hline(0.5));
-  doc.put(index, { size: 11.5, x: 0, y: 46, cls: "f", spacing: 0.06 });
-  doc.put(title, { f: "serif", size: 34, x: 28, y: 48, cls: "i" });
+  const num = layout(FONTS.mono, index, { size: 11, spacing: 0.06 }).width;
+  const w = Math.ceil(num + 10 + layout(FONTS.serif, title, { size: 30 }).width + 2);
+  const doc = new Doc(theme, w, 52);
+  doc.put(index, { size: 11, x: 0, y: 38, cls: "f", spacing: 0.06 });
+  doc.put(title, { f: "serif", size: 30, x: num + 10, y: 38, cls: "i" });
   return doc;
 }
 
