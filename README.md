@@ -16,7 +16,7 @@ I'm Anupam, a software and AI engineer in New Delhi and a final-year B.Tech stud
 <code>before</code>&nbsp; AI full-stack developer at Dasgupta Maiti & Associates (2026) and product engineering intern at Syuniqe (2025).<br>
 <code>open&nbsp;to</code>&nbsp; full-time roles, internships and freelance work. **[Resume (PDF)](https://www.anupamdas.me/Anupam-Das-Resume.pdf)** · [book a call](https://cal.com/itsmrad) · [itsmrad@gmail.com](mailto:itsmrad@gmail.com)
 
-<a href="https://www.anupamdas.me/#work"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/head-work-dark.svg"><img src="assets/head-work-light.svg" height="52" alt="01. Selected work"></picture></a>
+<a href="https://www.anupamdas.me/#work"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/head-work-dark.svg"><img src="assets/head-work-light.svg" height="46" alt="01. Selected work"></picture></a>
 
 <a href="https://codenaya.tech">
   <picture>
@@ -60,7 +60,7 @@ Built with Next.js 16, React 19, TypeScript, Tailwind CSS 4, CodeMirror 6, Conve
 Shipped with CI-gated tagged releases, a checksum-verifying installer, .deb and .rpm packages for amd64 and arm64, an Arch PKGBUILD, a Nix flake, a signed macOS package and a Homebrew tap.
 </details>
 
-<a href="https://www.anupamdas.me/#stack"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/head-stack-dark.svg"><img src="assets/head-stack-light.svg" height="52" alt="02. Stack"></picture></a>
+<a href="https://www.anupamdas.me/#stack"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/head-stack-dark.svg"><img src="assets/head-stack-light.svg" height="46" alt="02. Stack"></picture></a>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg">
@@ -69,12 +69,12 @@ Shipped with CI-gated tagged releases, a checksum-verifying installer, .deb and 
 
 <sub>Rust, TypeScript, Python, React, Next.js, Node.js, FastAPI, LangGraph, RAG and tool calling, PostgreSQL, Docker, Git. Also JavaScript, C/C++, SQL, Express, JWT, OAuth 2.0, Tailwind CSS, shadcn/ui, MongoDB, Convex, Pinecone, LangChain, OpenRouter, Vercel AI SDK, Langfuse, CI/CD, Sentry, Postman and Figma.</sub>
 
-<a href="https://www.anupamdas.me/#work"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/head-building-dark.svg"><img src="assets/head-building-light.svg" height="52" alt="03. Currently building"></picture></a>
+<a href="https://www.anupamdas.me/#work"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/head-building-dark.svg"><img src="assets/head-building-light.svg" height="46" alt="03. Currently building"></picture></a>
 
 - [`larpcc`](https://github.com/itsmrad/larpcc): a Rust CLI that keeps separate Claude Code and Codex profile directories from colliding.
 - [`vidura`](https://github.com/itsmrad/vidura): the foundation for one persistent assistant across web, desktop and mobile.
 
-<a href="https://www.anupamdas.me/#contact"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/head-contact-dark.svg"><img src="assets/head-contact-light.svg" height="52" alt="04. Say hi"></picture></a>
+<a href="https://www.anupamdas.me/#contact"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/head-contact-dark.svg"><img src="assets/head-contact-light.svg" height="46" alt="04. Say hi"></picture></a>
 
 <p>
   <a href="https://www.anupamdas.me/Anupam-Das-Resume.pdf"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/button-resume-dark.svg"><img src="assets/button-resume-light.svg" height="40" alt="Download resume (PDF)"></picture></a>

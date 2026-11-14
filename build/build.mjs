@@ -120,7 +120,7 @@ const GLYPHS = {
   react: `<circle cx="12" cy="12" r="1.3"/><ellipse cx="12" cy="12" rx="10" ry="3.8"/><ellipse cx="12" cy="12" rx="10" ry="3.8" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="3.8" transform="rotate(-60 12 12)"/>`,
   python: `<path d="M12 3c-4 0-4.5 1.6-4.5 3v2.5H12v1H6C4 9.5 3 11 3 13.5S4 17.5 6 17.5h1.5V15c0-1.6 1.2-3 3-3h3c1.4 0 2.5-1.1 2.5-2.5V6c0-1.6-1.3-3-4-3Z"/><path d="M12 21c4 0 4.5-1.6 4.5-3v-2.5H12v-1h6c2 0 3-1.5 3-4S20 6.5 18 6.5h-1.5"/><circle cx="9.8" cy="5.6" r=".5"/><circle cx="14.2" cy="18.4" r=".5"/>`,
   next: `<circle cx="12" cy="12" r="9"/><path d="M9 16V8l7.5 10.5M15 8v5"/>`,
-  node: `<path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5Z"/><path d="M14.6 9.4c-.3-.8-1.3-1.2-2.5-1.2-1.4 0-2.4.6-2.4 1.6 0 2.3 5.2 1.1 5.2 3.6 0 1.1-1.1 1.8-2.7 1.8-1.4 0-2.4-.5-2.7-1.4"/>`,
+  node: `<path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5Z"/><path d="M9.3 16v-6.4M9.3 11.6c.4-1.3 1.4-2 2.7-2 1.6 0 2.7 1 2.7 2.8V16"/>`,
   fastapi: `<circle cx="12" cy="12" r="9"/><path d="M13 5.5 8.5 13H12l-1 5.5L15.5 11H12Z"/>`,
   graph: `<circle cx="6" cy="6" r="2.2"/><circle cx="18" cy="6" r="2.2"/><circle cx="12" cy="18" r="2.2"/><path d="M8.2 6h7.6M7.1 7.9l3.8 8.2M16.9 7.9l-3.8 8.2"/><path d="M19.6 7.6c2 2.6 1.4 6-1 7.4" stroke-dasharray="1.6 1.8"/>`,
 };
@@ -158,7 +158,9 @@ function monogram(doc, ox, oy, s) {
     `</g>`,
     // The plotter pass: a short red dash running the outline of each face.
     `<g class="motion sa trace" stroke-width="1.6" stroke-linecap="round">`,
-    ...faces.map((d, k) => `<path pathLength="100" style="animation-delay:-${k * 3.1}s" d="${d}"/>`),
+    // Two pens only (the A and the D), half a lap apart.
+    `<path pathLength="100" d="${faces[1]}"/>`,
+    `<path pathLength="100" style="animation-delay:-7s" d="${faces[2]}"/>`,
     `</g>`,
   );
   doc.css.push(
@@ -386,13 +388,13 @@ function stackStrip(theme) {
 // --- 4. Section heads, buttons, title block -----------------------------------
 
 // Shown at natural size (never scaled to the column), so the title stays
-// 30px on a phone too.
+// 26px on a phone too.
 function sectionHead(theme, index, title) {
   const num = layout(FONTS.mono, index, { size: 11, spacing: 0.06 }).width;
-  const w = Math.ceil(num + 10 + layout(FONTS.serif, title, { size: 30 }).width + 2);
-  const doc = new Doc(theme, w, 52);
-  doc.put(index, { size: 11, x: 0, y: 38, cls: "f", spacing: 0.06 });
-  doc.put(title, { f: "serif", size: 30, x: num + 10, y: 38, cls: "i" });
+  const w = Math.ceil(num + 10 + layout(FONTS.serif, title, { size: 26 }).width + 2);
+  const doc = new Doc(theme, w, 46);
+  doc.put(index, { size: 11, x: 0, y: 34, cls: "f", spacing: 0.06 });
+  doc.put(title, { f: "serif", size: 26, x: num + 10, y: 34, cls: "i" });
   return doc;
 }
 
